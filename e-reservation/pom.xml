@@ -49,7 +49,7 @@
 			<scope>test</scope>
 		</dependency>
 	
-		
+		<!-- No se creaba las tablas hasta colocar esto -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
