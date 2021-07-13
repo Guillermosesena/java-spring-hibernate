@@ -1,20 +1,25 @@
 package com.platzi.ereservation.model;
 
 import lombok.Data;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Set;
 
-import javax.persistence.*;
 
-import org.hibernate.annotations.GenericGenerator;
 
 /**
  * Class that represents the client table
  * @author Guillermo
  * */
+@Data
 @Entity
 @Table(name="cliente")
-@Data
 public class Cliente {
 	
 	@Id
@@ -34,5 +39,5 @@ public class Cliente {
 
 	}
 
-	
+
 }

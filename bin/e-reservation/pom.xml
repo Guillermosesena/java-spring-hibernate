@@ -7,6 +7,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
+	
 	</parent>
 	<groupId>com.platzi</groupId>
 	<artifactId>e-reservation</artifactId>
@@ -17,16 +18,39 @@
 		<java.version>8</java.version>
 	</properties>
 	<dependencies>
+	
+	 <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		
+		<!-- Lombok -->
+		<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<scope>provided</scope>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+			
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	
+	
+	
 	</dependencies>
 
 	<build>
@@ -35,7 +59,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.10</version>
+  <configuration>
+    <useFile>false</useFile>
+  </configuration>
+</plugin>
+			
+			
 		</plugins>
+		
+		
 	</build>
 
 </project>

@@ -4,13 +4,15 @@
 package com.platzi.ereservation.model;
 
 import java.util.Date;
+
 import java.util.Set;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -28,7 +30,7 @@ import lombok.Data;
 public class Reserva {
 	@Id
 	@GeneratedValue(generator="system-uuid")
-	@GenericGenerator(name = "system-uuid", strategy="uuid2")
+	@GenericGenerator(name="system-uuid", strategy="uuid2")
 	private String idRes;
 	private Date fechaIngresoRes;
 	private Date fechaSalidaRes;
@@ -37,5 +39,5 @@ public class Reserva {
 	
 	@ManyToOne
 	@JoinColumn(name="idCli")
-	private Set<Cliente> clientes;
+	private Cliente cliente;
 }
