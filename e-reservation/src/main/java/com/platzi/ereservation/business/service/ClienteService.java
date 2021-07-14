@@ -1,5 +1,7 @@
 package com.platzi.ereservation.business.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,5 +52,9 @@ public class ClienteService {
 	 * */
 	public Cliente findByIdentificacion(String identificacionCli) {
 		return this.clienteRepository.findByIdentificacion(identificacionCli);
+	}
+	
+	public List<Cliente> findAll(){
+		return this.clienteRepository.findAll();
 	}
 }
