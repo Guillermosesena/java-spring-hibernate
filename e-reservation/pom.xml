@@ -109,9 +109,9 @@
     				<image>
     					<name>guillermosesena/${project.build.finalName}</name>
     					<build><from>openjdk:latest</from>
-    					<entryPoint>java -Dspring.profiles.active=prod -jar C:\Users\g.sesena.pascacio\Documents\Courses\application\{project.build.finalName}.jar</entryPoint>
+    					<entryPoint>java -Dspring.profiles.active=prod -jar /{project.build.finalName}.jar</entryPoint>
     					<assembly>
-    						<basedir>C:\Users\g.sesena.pascacio\Documents\Courses\application\</basedir>
+    						<basedir>/</basedir>
     						<descriptorRef>artifact</descriptorRef>
     						<inline>
     						<id>assembly</id>
