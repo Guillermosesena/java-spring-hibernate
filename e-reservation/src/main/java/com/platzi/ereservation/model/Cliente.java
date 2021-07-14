@@ -21,7 +21,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name="cliente")
-@NamedQuery(name="Client.findByIdentificacion", query="Select c "
+@NamedQuery(name="Cliente.findByIdentificacion", query="Select c "
 		+ "from Cliente c where c.identificacionCli = ?1")
 public class Cliente {
 	
