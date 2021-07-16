@@ -11,11 +11,6 @@
 
 ## Introduction
 
-#### 
-Model, mapped classes representing database tables
-Business, Classes representing the business and its logic
-View classes, files related to response that the user interacts
-
 ##### Servlet
 They are components on the server side, which contain classes with special connotations, they allow to process response requests, they also generate dynamic content
 
@@ -34,6 +29,9 @@ Technology that allows optimization of development time in the creation and depl
 #### Spring Data
 Provides an easy way to implement the data access layer. Create a repository deployment. Supports paging, query execution. The main Spring Data tools are the repositories, the main of them is tje CrudRepository and Paging AndSorting Repository.
 
+#### Hibernate
+It is an implementation of JPA, that allows map the Java classes to database tables.
+
 #### Spring Swagger
 It is the default tool to document web API, it generates an interactive way to do it
 
@@ -50,23 +48,32 @@ It is a framework that allows you to fully manage the security of the applicatio
 - -Supports http basic, oauth, http digest authentication models, among others
 
 ## This&nbsp;repository
-This repository contains the project developed  is a REST API that controls the operations of users. This API gets information from a H2 database. What this API does is:
+This repository contains the project developed, which is a REST API that controls the operations of users in a reservation system. This API gets information from PostgreSQL (from a docker image). What this API does is:
 
 - Gets the users
+- Gets a user by id
 - Posts a new user
 - Deletes a user
 - Updates a user
-- Pagination of users
+
+Besides this API implements http basic authentication and use Thymeleaf in order to show basic login page that allows see the documentation of this API. 
 
 
 ## Dependencies
 - Spring Tool IDE
-- JDK11 or later
--
-
+- JDK 8
+- Docker Desktop
+- OmniDB
+- Add spring-boot-starter-data-jpa
+- Add lombok
+- Add postgresql
+- Add spring-boot-starter-web
+- Add springfox-swagger2 2.7.0
+- Add springfox-swagger-ui 2.7.0
+- Add spring-boot-starter-thymeleaf 
 
 ## Run&nbsp;Code
-You can only run these projects using Spring Tool IDE or another IDE.
+You can only run these projects using Spring Tool IDE or another IDE, the API is using the 8080 port.
 
 
 ## Platzi&nbsp;Course
@@ -77,3 +84,12 @@ Check out [Platzi's Spring and Hibernate course](https://platzi.com/clases/jee/)
 ## Notes
 
 Most commits correspond to sections of the course in which the project code was changed.
+
+
+
+
+
+
+
+
+
